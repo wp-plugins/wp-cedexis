@@ -1,4 +1,4 @@
-=== OpenPGP Form Encryption for WordPress ===
+=== Cedexis Radar Monitoring for WordPress ===
 Contributors: arnesonium
 Tags: cedexis, webperf, cdn, performance, monitoring, analytics
 Requires at least: 4.0
