@@ -18,7 +18,7 @@ tool used to measure website performance. Radar data can be used to
 feed the Cedexis Openmix decision-making engine, and also contributes
 to a holistic view of network health. 
 
-This plugin relies on the =wp_footer= action, which most themes
+This plugin relies on the [wp_footer](http://codex.wordpress.org/Function_Reference/wp_footer) action, which most themes
 support. If your theme doesn't support it, please contact the theme's
 author.
 
@@ -50,6 +50,10 @@ You will also need a free Cedexis Portal account.
 
 == Frequently Asked Questions ==
 
+= What is Cedexis Radar? =
+Cedexis Radar is a free tool for monitoring website availability and
+performance. Data from Cedexis Radar is used to route Internet traffic
+intelligently. You can read more about Cedexis at their http://cedexis.com/
 
 == Screenshots ==
 
