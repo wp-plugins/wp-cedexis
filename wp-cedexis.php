@@ -91,5 +91,14 @@ function wp_cedexis_register_settings_menu () {
     );
 }
 
+function wp_cedexis_action_links ($links) {
+    $actionLinks = array(
+        'settings' => '<a href="' . admin_url('options-general.php?page=wp_cedexis_radar') . '" title="Cedexis Radar settings">Settings</a>'
+    );
+
+    return array_merge($actionLinks, $links);
+}
+
 add_action('admin_menu', 'wp_cedexis_register_settings_menu');
 add_action('admin_init', 'wp_cedexis_register_settings');
+add_action('plugin_action_links_' . plugin_basename(__FILE__), 'wp_cedexis_action_links');
