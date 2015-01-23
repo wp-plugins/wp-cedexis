@@ -51,6 +51,8 @@ add_action('wp_footer', 'wp_cedexis_add_tag');
 
 function wp_cedexis_register_settings () {
     register_setting('wp-cedexis-settings', 'cedexis_radar_tag_id');
+    register_setting('wp-cedexis-settings', 'cedexis_api_client_id');
+    register_setting('wp-cedexis-settings', 'cedexis_api_client_secret');
 }
 
 function wp_cedexis_settings_menu () {
@@ -71,7 +73,21 @@ do_settings_sections('wp-cedexis-settings');
 <p>To find your Radar tag ID, log into the <a target="_top" href="https://portal.cedexis.com">Cedexis Portal</a> and 
 go to the <b>Radar Tag</b> page. On line 3 of the code, you will see a number before the "radar.js" script. Enter that 
 number into this box.</p>
-</td>
+      </td>
+    </tr>
+    <tr valign="top">
+      <th scope="row">API Client ID</th>
+      <td>
+        <input type="text" name="cedexis_api_client_id" value="<?php echo esc_attr(get_option('cedexis_api_client_id')); ?>" />
+        <p>This parameter is not yet used.</p>
+      </td>
+    </tr>
+    <tr valign="top">
+      <th scope="row">API Client Secret</th>
+      <td>
+        <input type="text" name="cedexis_api_client_secret" value="<?php echo esc_attr(get_option('cedexis_api_client_secret')); ?>" />
+        <p>This parameter is not yet used.</p>
+      </td>
     </tr>
   </table>
   <?php submit_button(); ?>
@@ -93,7 +109,8 @@ function wp_cedexis_register_settings_menu () {
 
 function wp_cedexis_action_links ($links) {
     $actionLinks = array(
-        'settings' => '<a href="' . admin_url('options-general.php?page=wp_cedexis_radar') . '" title="Cedexis Radar settings">Settings</a>'
+        'settings' => '<a href="' . admin_url('options-general.php?page=wp_cedexis_radar') . '" title="Cedexis Radar settings">Settings</a>',
+        'portal' => '<a target="_blank" href="https://portal.cedexis.com/">Cedexis Portal</a>'
     );
 
     return array_merge($actionLinks, $links);

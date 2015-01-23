@@ -48,6 +48,14 @@ You will also need a free Cedexis Portal account.
 1. Enter the tag ID from the Radar Tag into the plugin's configuration
    screen.
 
+For advanced use, you will want to configure Cedexis API access.
+
+1. Go to the [Cedexis Portal](https://portal.cedexis.com/)
+1. In the Cedexis Portal, go to **Administration > Cedexis API**
+1. Click **OAuth 2.0 configuration**, then add a new client.
+1. Enter the <code>client_id</code> and <code>client_secret</code> on
+   the plugin configuration page.
+
 == Frequently Asked Questions ==
 
 = What is Cedexis Radar? =
